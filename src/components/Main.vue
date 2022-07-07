@@ -1,12 +1,12 @@
 <template>
   <main class="main">
     <h1 class="main__title">{{ title.toUpperCase() }}</h1>
-    <SliderContainer emblem="hd.kinopoisk.ru" />
+    <SliderImageContainer emblem="hd.kinopoisk.ru" />
   </main>
 </template>
 
 <script>
-import SliderContainer from './SliderContainer.vue';
+import SliderImageContainer from './SliderImageContainer.vue';
 
 export default {
   name: 'Main',
@@ -14,7 +14,7 @@ export default {
     title: String,
   },
   components: {
-    SliderContainer,
+    SliderImageContainer,
   },
 };
 </script>
@@ -23,18 +23,15 @@ export default {
 $textColorTitle: #FFCC64;
 $backgroundMainImage: url('../images/background_main.jpg');
 $cloudsCoverOnPhoto: url('../images/clouds_in_front_picture.png');
-
 .main {
   font-family: 'Futura';
   background-image: $backgroundMainImage;
-  background-color: #000;
-  background-size: contain;
+  background-size: cover;
   position: relative;
   padding-left: 35px;
   padding-right: 35px;
   padding-top: 20px;
 }
-
 .main__title {
   font-size: 45px;
   line-height: 72px;
@@ -44,5 +41,4 @@ $cloudsCoverOnPhoto: url('../images/clouds_in_front_picture.png');
   color: $textColorTitle;
   margin-top: 50px;
 }
-
 </style>
