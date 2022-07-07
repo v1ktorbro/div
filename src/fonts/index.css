@@ -1,0 +1,17 @@
+@font-face {
+  font-family: "Futura";
+  src: url("./futura-bold.woff2") format("woff2");
+  font-weight: 700;
+};
+
+@font-face {
+  font-family: "Kinopoisk";
+  src: url("./kinopoisk-regular.woff2") format("woff2");
+  font-weight: 400;
+};
+
+@font-face {
+  font-family: "Kinopoisk";
+  src: url("./kinopoisk-bold.woff2") format("woff2");
+  font-weight: 700;
+};
