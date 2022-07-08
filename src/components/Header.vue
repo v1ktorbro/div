@@ -23,7 +23,7 @@ $logo: url('../images/logo.svg');
   position: absolute;
   top: 40px;
   width: calc(100% - 70px);
-  z-index: 3;
+  z-index: 30;
   margin-left: 35px;
   margin-right: 35px;
 }
