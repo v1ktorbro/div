@@ -38,6 +38,7 @@ $arrowBtnImage: url('../images/icon_middle_arrow.svg');
   color: #333333;
   border: none;
   cursor: pointer;
+  margin-bottom: 50px;
   transform: translate(-42%, -460%) rotate(-90deg) ;
   &:active {
     scale: 1.03;
