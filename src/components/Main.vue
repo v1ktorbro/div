@@ -51,5 +51,12 @@ $cloudsCoverOnPhoto: url('../images/clouds_in_front_picture.png');
   text-align: center;
   color: $textColorTitle;
   margin-top: 50px;
+  position: absolute;
+  white-space: nowrap;
+  z-index: 1;
+  padding-top: 24px;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  margin-left: 100px;
 }
 </style>
