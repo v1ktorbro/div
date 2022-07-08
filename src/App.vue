@@ -17,13 +17,16 @@ export default {
 </script>
 
 <style>
+body {
+  background-color: rgba(51, 51, 51, .15);
+}
 #app {
   position: relative;
   font-family: Avenir, Helvetica, Arial, sans-serif;
   max-width: 1440px;
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
+  margin: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
