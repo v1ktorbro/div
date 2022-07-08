@@ -26,12 +26,11 @@ $cloudsCoverOnPhoto: url('../images/clouds_in_front_picture.png');
 .slider-image {
   font-family: 'Kinopoisk';
   margin: 0 auto;
-  width: 902px;
+  min-width: 902px;
   display: flex;
   flex-direction: column;
   position: relative;
 }
-
 .slider-image__circle-table-info {
   width: 56px;
   height: 56px;
@@ -47,7 +46,6 @@ $cloudsCoverOnPhoto: url('../images/clouds_in_front_picture.png');
 }
 .slider-image__block-description {
   z-index: 1;
-  border: 1px solid red;
   display: flex;
   flex-direction: column;
   align-self: center;
