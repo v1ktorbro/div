@@ -21,6 +21,9 @@ export default {
   position: relative;
   font-family: Avenir, Helvetica, Arial, sans-serif;
   max-width: 1440px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
