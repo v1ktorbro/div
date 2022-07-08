@@ -30,6 +30,7 @@ $arrowBtnImage: url('../images/icon_middle_arrow.svg');
   top: 200px;
 }
 .slider-hints-container__btn-scroll {
+  user-select: none;
   background-color: transparent;
   font-family: 'Kinopoisk';
   font-size: 14px;
@@ -37,16 +38,23 @@ $arrowBtnImage: url('../images/icon_middle_arrow.svg');
   color: #333333;
   border: none;
   cursor: pointer;
-  transform: translate(-42%, -460%) rotate(90deg) ;
+  transform: translate(-42%, -460%) rotate(-90deg) ;
   &:active {
     scale: 1.03;
     opacity: .5;
   }
-  &::after {
-    content: $arrowBtnImage;
+  &::before {
+    content: ' ';
+    background-image: $arrowBtnImage;
+    background-repeat: no-repeat;
+    background-size: 63px 4px;
+    background-position: center;
     position: absolute;
-    right: -40px;
-    top: -1px;
+    right: 140px;
+    top: 3px;
+    bottom: 0;
+    transform: rotate(180deg);
+    width: 63px;
   }
 }
 </style>
