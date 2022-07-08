@@ -22,6 +22,7 @@ export default {
 .slider-hints__list {
   padding: 0;
   margin: 0;
+  margin-top: 180px;
   color: #333333;
   display: flex;
   flex-direction: column;
@@ -30,7 +31,7 @@ export default {
 .slider-hints__item-list {
   list-style-position: inside;
   list-style-type: '‒';
-  margin-bottom: 51px;
+  margin-bottom: 45px;
   &:first-of-type {
     margin-top: 30px;
   }
