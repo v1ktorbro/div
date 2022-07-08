@@ -28,13 +28,17 @@ $arrowBtnImage: url('../images/icon_middle_arrow.svg');
   display: flex;
   justify-content: center;
   margin-left: 83px;
+  margin-top: 180px;
   &::after {
     content: $cloudsCoverOnPhoto;
+    max-width: 100%;
+    max-height: 100%;
     position: absolute;
     background-image: $cloudsCoverOnPhoto;
-    right: -44rem;
-    bottom: -21rem;
-    margin-right: auto;
+    background-size: cover;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
   }
 }
 .slider-image-container__emblem {
