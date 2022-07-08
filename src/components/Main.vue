@@ -35,10 +35,13 @@ $cloudsCoverOnPhoto: url('../images/clouds_in_front_picture.png');
   position: relative;
   padding-left: 35px;
   padding-right: 35px;
+  z-index: 24;
   padding-top: 20px;
 }
 .main__wrapper-for-sliders {
-  display: flex;
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: minmax(min-content, 117px) minmax(min-content, 902px) minmax(min-content, 50px);
 }
 .main__title {
   font-size: 45px;
@@ -48,6 +51,5 @@ $cloudsCoverOnPhoto: url('../images/clouds_in_front_picture.png');
   text-align: center;
   color: $textColorTitle;
   margin-top: 50px;
-  z-index: 1;
 }
 </style>
