@@ -34,12 +34,10 @@ $arrowBtnImage: url('../images/icon_middle_arrow.svg');
     background-image: $cloudsCoverOnPhoto;
     right: -44rem;
     bottom: -21rem;
-    z-index: 0;
     margin-right: auto;
   }
 }
 .slider-image-container__emblem {
-  grid-area: emblem;
   font-family: 'Kinopoisk';
   font-size: 14px;
   line-height: 15px;
