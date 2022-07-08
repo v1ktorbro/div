@@ -26,6 +26,7 @@ $logo: url('../images/logo.svg');
   z-index: 30;
   margin-left: 35px;
   margin-right: 35px;
+  margin-left: 100px;
 }
 
 .header__btn-menu {
