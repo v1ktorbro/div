@@ -12,6 +12,12 @@
 
 @font-face {
   font-family: "Kinopoisk";
+  src: url("./kinopoisk-medium.woff2") format("woff2");
+  font-weight: 500;
+};
+
+@font-face {
+  font-family: "Kinopoisk";
   src: url("./kinopoisk-bold.woff2") format("woff2");
   font-weight: 700;
 };
