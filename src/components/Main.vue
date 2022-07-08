@@ -1,12 +1,16 @@
 <template>
   <main class="main">
     <h1 class="main__title">{{ title.toUpperCase() }}</h1>
-    <SliderImageContainer emblem="hd.kinopoisk.ru" />
+    <div class="main__wrapper-for-sliders">
+      <SliderHintsContainer btnNameScroll="Скрольте вниз" />
+      <SliderImageContainer emblem="hd.kinopoisk.ru" />
+    </div>
   </main>
 </template>
 
 <script>
 import SliderImageContainer from './SliderImageContainer.vue';
+import SliderHintsContainer from './SliderHintsContainer.vue';
 
 export default {
   name: 'Main',
@@ -15,6 +19,7 @@ export default {
   },
   components: {
     SliderImageContainer,
+    SliderHintsContainer,
   },
 };
 </script>
@@ -32,6 +37,9 @@ $cloudsCoverOnPhoto: url('../images/clouds_in_front_picture.png');
   padding-right: 35px;
   padding-top: 20px;
 }
+.main__wrapper-for-sliders {
+  display: flex;
+}
 .main__title {
   font-size: 45px;
   line-height: 72px;
@@ -40,5 +48,6 @@ $cloudsCoverOnPhoto: url('../images/clouds_in_front_picture.png');
   text-align: center;
   color: $textColorTitle;
   margin-top: 50px;
+  z-index: 1;
 }
 </style>
