@@ -42,6 +42,7 @@ $cloudsCoverOnPhoto: url('../images/clouds_in_front_picture.png');
   margin: 0 auto 1.3rem;
   align-items: center;
   justify-content: center;
+  user-select: none;
   background-color: #fff;
 }
 .slider-image__block-description {
@@ -51,12 +52,12 @@ $cloudsCoverOnPhoto: url('../images/clouds_in_front_picture.png');
   align-self: center;
   position: absolute;
   bottom: 40px;
-  user-select: none;
 }
 .slider-image__image {
   width: 303px;
   height: 436px;
   margin: 0 auto;
+  user-select: none;
   padding-right: 55px;
 }
 .slider-image__description {
@@ -108,17 +109,23 @@ $cloudsCoverOnPhoto: url('../images/clouds_in_front_picture.png');
   text-align: center;
   display: flex;
   align-self: center;
+  user-select: none;
   margin-top: 2.4rem;
   &:active {
     scale: 1.03;
     opacity: .5;
   }
-  &::after {
-    content: $arrowBtnImage;
+    &::before {
+    content: ' ';
+    background-image: $arrowBtnImage;
+    background-repeat: no-repeat;
+    background-size: 30px 4px;
+    background-position: center;
     position: absolute;
-    top: 25%;
-    right: -40px;
-    transform: translate(0%, -30%);
+    right: -60px;
+    top: -4px;
+    bottom: 0;
+    width: 63px;
   }
 }
 </style>
