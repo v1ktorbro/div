@@ -23,9 +23,11 @@ export default {
 <style lang="scss">
 $cloudsCoverOnPhoto: url('../images/clouds_in_front_picture.png');
 $arrowBtnImage: url('../images/icon_middle_arrow.svg');
+
 .slider-image-container {
   display: flex;
   justify-content: center;
+  margin-left: 83px;
   &::after {
     content: $cloudsCoverOnPhoto;
     position: absolute;
@@ -34,7 +36,6 @@ $arrowBtnImage: url('../images/icon_middle_arrow.svg');
     bottom: -21rem;
     z-index: 0;
     margin-right: auto;
-    
   }
 }
 .slider-image-container__emblem {
@@ -44,9 +45,11 @@ $arrowBtnImage: url('../images/icon_middle_arrow.svg');
   line-height: 15px;
   position: absolute;
   right: 0;
-  top: 50%;
+  top: 40%;
   transform-origin: left;
   transform: translate(50%, -100%) rotate(90deg) ;
   color: #333333;
+  z-index: 1;
+  user-select: none;
 }
 </style>
