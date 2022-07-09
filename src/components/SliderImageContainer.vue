@@ -1,6 +1,6 @@
 <template>
   <article class="slider-image-container">
-    <SliderImage description="Для примера мы показали вам его лицо.  В первой серии он прячется в подвале 
+    <SliderImage :currentElemOfArray="currentElemOfArray" :handleChangeImageSlider="handleChangeImageSlider " description="Для примера мы показали вам его лицо.  В первой серии он прячется в подвале 
 за мониторами, и пусть борода не собьёт вас с толку. Найдите героя и нажмите  на паузу — 
 ему не терпится отдать вам промокод." btnName="Искать промокод" />
     <span class="slider-image-container__emblem">{{ emblem.toLowerCase() }}</span>
@@ -8,21 +8,34 @@
 </template>
 
 <script>
-import SliderImage from '../components/SliderImage.vue'
+import SliderImage from '../components/SliderImage.vue';
+import { initialDb } from '@/assets/initialDb';
 export default {
   name: 'SliderContainer',
+  data() {
+    return {
+      currentNumberImage: 1,
+      currentElemOfArray: {imageSrc: '', description: ''},
+    }
+  },
   props: {
     emblem: String,
   },
   components: {
     SliderImage,
   },
+  methods: {
+    handleChangeImageSlider() {
+      this.currentNumberImage++;
+      this.currentElemOfArray = initialDb[this.currentNumberImage];
+    }
+  },
 };
 </script>
 
 <style lang="scss">
-$cloudsCoverOnPhoto: url('../images/clouds_in_front_picture.png');
-$arrowBtnImage: url('../images/icon_middle_arrow.svg');
+$cloudsCoverOnPhoto: url('../assets/images/clouds_in_front_picture.png');
+$arrowBtnImage: url('../assets/images/icon_middle_arrow.svg');
 
 .slider-image-container {
   display: flex;
