@@ -26,8 +26,8 @@ export default {
 
 <style scoped lang="scss">
 $textColorTitle: #FFCC64;
-$backgroundMainImage: url('../images/background_main.jpg');
-$cloudsCoverOnPhoto: url('../images/clouds_in_front_picture.png');
+$backgroundMainImage: url('../assets/images/background_main.jpg');
+$cloudsCoverOnPhoto: url('../assets/images/clouds_in_front_picture.png');
 .main {
   font-family: 'Futura';
   background-image: $backgroundMainImage;
