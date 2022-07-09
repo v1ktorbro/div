@@ -19,7 +19,7 @@ export default {
 </script>
 
 <style lang="scss">
-$arrowBtnImage: url('../images/icon_middle_arrow.svg');
+$arrowBtnImage: url('../assets/images/icon_middle_arrow.svg');
 
 .slider-hints-container {
   font-family: 'Kinopoisk';
