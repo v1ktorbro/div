@@ -1,12 +1,13 @@
 <template>
   <aside class="slider-image">
     <span class="slider-image__circle-table-info">1/8</span>
-    <img src="../images/main_image_1.png" alt="" class="slider-image__image">
+    <!-- <img src="../assets/images/main_image_1.png" alt="" class="slider-image__image"> -->
+    <!-- <img :src="require(`../assets/images/${currentElemOfArray.imageSrc}`)" alt="" class="slider-image__image"> -->
     <div class="slider-image__block-description">
     <p class="slider-image__description">{{ description }}</p>
     <button class="slider-image__btn-pomocode">{{ btnName }}</button>
     </div>
-    <button type="button" class="slider-image__btn-next" />
+    <button @click="handleChangeImageSlider" type="button" class="slider-image__btn-next" />
   </aside>
 </template>
 
@@ -16,13 +17,26 @@ export default {
   props: {
     btnName: String,
     description: String,
+    handleChangeImageSlider: Function,
+    currentElemOfArray: Object,
   },
+  methods: {
+    changeSlider() {
+      this.handleChangeImageSlider();
+    },
+  },
+  mounted: function() {
+     console.log('mounted:', this.currentElemOfArray);
+  },
+  updated: function() {
+     console.log('updated:', this.currentElemOfArray);
+  }
 };
 </script>
 
 <style scoped lang="scss">
-$arrowBtnImage: url('../images/icon_short_arrow.svg');
-$cloudsCoverOnPhoto: url('../images/clouds_in_front_picture.png');
+$arrowBtnImage: url('../assets/images/icon_short_arrow.svg');
+$cloudsCoverOnPhoto: url('../assets/images/clouds_in_front_picture.png');
 .slider-image {
   font-family: 'Kinopoisk';
   margin: 0 auto;
