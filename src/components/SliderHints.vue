@@ -47,13 +47,10 @@ export default {
     font-weight: 500;
     user-select: none;
   }
-
 }
-
 .slider-hints__active-item-list {
   margin-left: 20px;
   font-size: 14px;
   font-weight: 400;
-
 }
 </style>
