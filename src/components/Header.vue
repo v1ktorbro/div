@@ -12,8 +12,8 @@ export default {
 </script>
 
 <style scoped lang="scss">
-$btnMenu: url('../images/icon_menu.svg');
-$logo: url('../images/logo.svg');
+$btnMenu: url('../assets/images/icon_menu.svg');
+$logo: url('../assets/images/logo.svg');
 
 .header {
   display: grid;
