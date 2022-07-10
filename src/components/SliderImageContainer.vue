@@ -30,7 +30,7 @@ export default {
   },
   methods: {
     handleChangeImageSlider() {
-      this.currentNumberElemArr++;
+      this.currentElemOfArrayInfo.cuurentImageNumber  >= this.currentElemOfArrayInfo.allElementsInArr ? this.currentNumberElemArr = 0 : this.currentNumberElemArr++;
       this.currentElemOfArrayInfo = {...this.currentElemOfArrayInfo, imageName: initialDb[this.currentNumberElemArr].imageName, description: initialDb[this.currentNumberElemArr].description, cuurentImageNumber: this.currentNumberElemArr + 1};
     }
   },
