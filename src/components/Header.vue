@@ -1,6 +1,6 @@
 <template>
 <header class="header">
-  <button type="button" class="header__btn-menu" />
+  <button @click="handlerBtnMenu" type="button" class="header__btn-menu" />
   <a href="https://www.kinopoisk.ru/" target="_blank" class="header__logo" />
 </header>
 </template>
@@ -8,6 +8,11 @@
 <script>
 export default {
   name: 'Header',
+  methods: {
+    handlerBtnMenu() {
+      alert('Яб тоже хотел что-бы по клику что-то происходило, но увы, в другой раз!')
+    }
+  },
 };
 </script>
 
@@ -26,7 +31,6 @@ $logo: url('../assets/images/logo.svg');
   z-index: 30;
   margin-left: 35px;
   margin-right: 35px;
-  margin-left: 100px;
 }
 
 .header__btn-menu {
@@ -38,6 +42,7 @@ $logo: url('../assets/images/logo.svg');
   height: 16px;
   background-size: 20px 16px;
   cursor: pointer;
+  background-color: transparent;
 }
 
 .header__logo {
@@ -45,6 +50,7 @@ $logo: url('../assets/images/logo.svg');
   width: 183px;
   height: 25px;
   background-repeat: no-repeat;
+  margin-left: 100px;
 }
 
 </style>
