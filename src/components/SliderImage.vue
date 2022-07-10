@@ -1,9 +1,9 @@
 <template>
   <aside class="slider-image">
-    <span class="slider-image__circle-table-info">1/8</span>
-    <img  :src="require(`../assets/images/${currentElemOfArray.imageName}`)" alt="Фото знаменитого человека" class="slider-image__image">
+    <span class="slider-image__circle-table-info">{{ `${currentElemOfArrayInfo.cuurentImageNumber} / ${currentElemOfArrayInfo.allElementsInArr}` }}</span>
+    <img  :src="require(`../assets/images/${currentElemOfArrayInfo.imageName}`)" alt="Фото знаменитого человека" class="slider-image__image">
     <div class="slider-image__block-description">
-    <p class="slider-image__description">{{ currentElemOfArray.description }}</p>
+    <p class="slider-image__description">{{ currentElemOfArrayInfo.description }}</p>
     <button class="slider-image__btn-pomocode">{{ btnName }}</button>
     </div>
     <button @click="handleChangeImageSlider" type="button" class="slider-image__btn-next" />
@@ -16,7 +16,7 @@ export default {
   props: {
     btnName: String,
     handleChangeImageSlider: Function,
-    currentElemOfArray: Object,
+    currentElemOfArrayInfo: Object,
   },
   methods: {
     changeSlider() {
