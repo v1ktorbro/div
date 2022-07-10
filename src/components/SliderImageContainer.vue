@@ -1,8 +1,6 @@
 <template>
   <article class="slider-image-container">
-    <SliderImage :currentElemOfArray="currentElemOfArray" :handleChangeImageSlider="handleChangeImageSlider " description="Для примера мы показали вам его лицо.  В первой серии он прячется в подвале 
-за мониторами, и пусть борода не собьёт вас с толку. Найдите героя и нажмите  на паузу — 
-ему не терпится отдать вам промокод." btnName="Искать промокод" />
+    <SliderImage :currentElemOfArray="currentElemOfArray" :handleChangeImageSlider="handleChangeImageSlider" btnName="Искать промокод" />
     <span class="slider-image-container__emblem">{{ emblem.toLowerCase() }}</span>
   </article>
 </template>
@@ -14,8 +12,8 @@ export default {
   name: 'SliderContainer',
   data() {
     return {
-      currentNumberImage: 1,
-      currentElemOfArray: {imageSrc: '', description: ''},
+      currentNumberImage: 0,
+      currentElemOfArray: {imageName: '', description: ''},
     }
   },
   props: {
@@ -23,6 +21,9 @@ export default {
   },
   components: {
     SliderImage,
+  },
+  beforeMount: function() {
+    this.currentElemOfArray = initialDb[this.currentNumberImage];
   },
   methods: {
     handleChangeImageSlider() {
