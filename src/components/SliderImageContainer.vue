@@ -1,6 +1,6 @@
 <template>
   <article class="slider-image-container">
-    <SliderImage :currentElemOfArray="currentElemOfArray" :handleChangeImageSlider="handleChangeImageSlider" btnName="Искать промокод" />
+    <SliderImage :currentElemOfArrayInfo="currentElemOfArrayInfo" :handleChangeImageSlider="handleChangeImageSlider" btnName="Искать промокод" />
     <span class="slider-image-container__emblem">{{ emblem.toLowerCase() }}</span>
   </article>
 </template>
@@ -12,8 +12,8 @@ export default {
   name: 'SliderContainer',
   data() {
     return {
-      currentNumberImage: 0,
-      currentElemOfArray: {imageName: '', description: ''},
+      currentNumberElemArr: 0,
+      currentElemOfArrayInfo: {imageName: '', description: '', cuurentImageNumber: Number, allElementsInArr: Number},
     }
   },
   props: {
@@ -23,12 +23,15 @@ export default {
     SliderImage,
   },
   beforeMount: function() {
-    this.currentElemOfArray = initialDb[this.currentNumberImage];
+    this.currentElemOfArrayInfo.imageName = initialDb[this.currentNumberElemArr].imageName;
+    this.currentElemOfArrayInfo.description = initialDb[this.currentNumberElemArr].description;
+    this.currentElemOfArrayInfo.cuurentImageNumber = this.currentNumberElemArr + 1;
+    this.currentElemOfArrayInfo.allElementsInArr = initialDb.length;
   },
   methods: {
     handleChangeImageSlider() {
-      this.currentNumberImage++;
-      this.currentElemOfArray = initialDb[this.currentNumberImage];
+      this.currentNumberElemArr++;
+      this.currentElemOfArrayInfo = {...this.currentElemOfArrayInfo, imageName: initialDb[this.currentNumberElemArr].imageName, description: initialDb[this.currentNumberElemArr].description, cuurentImageNumber: this.currentNumberElemArr + 1};
     }
   },
 };
