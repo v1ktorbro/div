@@ -1,24 +1,14 @@
-# div.
+# [Div](https://div.abrosimov.site)
 
-## Project setup
-```
-npm install
-```
+**[ Base URL: div.abrosimov.site ]**
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+Тестовое от компании [Digital production в Ставрополе](https://div-production.ru).
+## Инструменты:
+**VUE, JS, NGINX, UBUNTU, SCSS, GIT, HTML.**
 
-### Compiles and minifies for production
-```
-npm run build
-```
+## О проекте
+Простейшее приложение, суть которого заключается в реализации слайдера изображений. При клике на кнопку в компоненте SliderImage, просходит смена изображения и описание к нему.
 
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## Изучено новое:
+* Знакомство с библиотекой Vue.JS;
+* Путем ковыряния конфигов и настройки рутов для динамических изображений, поработал еще ближе с Webpack.
