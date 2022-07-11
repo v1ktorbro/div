@@ -28,15 +28,14 @@ export default {
 
 <style scoped lang="scss">
 $arrowBtnImage: url('../assets/images/icon_short_arrow.svg');
-$cloudsCoverOnPhoto: url('../assets/images/clouds_in_front_picture.png');
 .slider-image {
   font-family: 'Kinopoisk';
-  margin: 0 auto;
+  position: relative;
   display: flex;
   flex-direction: column;
-  position: relative;
 }
 .slider-image__circle-table-info {
+  position: relative;
   width: 56px;
   height: 56px;
   border-radius: 50px;
@@ -48,6 +47,7 @@ $cloudsCoverOnPhoto: url('../assets/images/clouds_in_front_picture.png');
   align-items: center;
   justify-content: center;
   user-select: none;
+  z-index: 3;
   background-color: #fff;
 }
 .slider-image__block-description {
@@ -71,9 +71,8 @@ $cloudsCoverOnPhoto: url('../assets/images/clouds_in_front_picture.png');
   line-height: 32px;
   letter-spacing: 0.4px;
   color: #000;
-  margin: 0;
+  margin: 0 auto;
   z-index: 1;
-  width: 902px;
 }
 .slider-image__btn-next {
   z-index: 1;
@@ -116,7 +115,7 @@ $cloudsCoverOnPhoto: url('../assets/images/clouds_in_front_picture.png');
   display: flex;
   align-self: center;
   user-select: none;
-  margin-top: 2.4rem;
+  margin-top: 38px;
   &:active {
     scale: 1.03;
     opacity: .5;
@@ -132,6 +131,44 @@ $cloudsCoverOnPhoto: url('../assets/images/clouds_in_front_picture.png');
     top: -4px;
     bottom: 0;
     width: 63px;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .slider-image__description {
+    font-size: 18px;
+    line-height: 28px;
+  }
+}
+.slider-image__btn-pomocode {
+  margin-top: 30px;
+}
+@media screen and (max-width: 650px) {
+  .slider-image__description  {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+.slider-image__btn-pomocode {
+  margin-top: 25px;
+}
+@media screen and (max-width: 550px) {
+  .slider-image__btn-pomocode  {
+    margin-top: 15px;
+  }
+}
+@media screen and (max-width: 460px) {
+  .slider-image__image {
+  width: 263px;
+  height: 386px;
+}
+  .slider-image__btn-next  {
+    margin-right: -30px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .slider-image__image {
+    padding-right: 0px;
   }
 }
 </style>
