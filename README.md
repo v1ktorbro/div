@@ -2,7 +2,6 @@
 
 **[ Base URL: https://v1ktorbro.github.io/div ]**
 
-Тестовое от компании [Digital production в Ставрополе](https://div-production.ru).
 ## Инструменты:
 **VUE, JS, NGINX, UBUNTU, SCSS, GIT, HTML.**
 
