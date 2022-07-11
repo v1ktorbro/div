@@ -51,12 +51,46 @@ $cloudsCoverOnPhoto: url('../assets/images/clouds_in_front_picture.png');
   text-align: center;
   color: $textColorTitle;
   margin-top: 50px;
-  position: absolute;
-  white-space: nowrap;
+  position: relative;
   z-index: 1;
   padding-top: 24px;
   left: 50%;
   transform: translate(-50%, 0%);
   margin-left: 100px;
+}
+@media screen and (max-width: 1280px) {
+  .main__title {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 40px;
+    line-height: 62px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .main__title {
+    font-size: 35px;
+    line-height: 52px;
+  }
+}
+@media screen and (max-width: 750px) {
+  .main__wrapper-for-sliders {
+    display: flex;
+  }
+}
+@media screen and (max-width: 650px) {
+  .main__title {
+    font-size: 30px;
+    line-height: 35px;
+  }
+}
+@media screen and (max-width: 550px) {
+  .main {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .main__title {
+    font-size: 26px;
+    line-height: 32px;
+  }
 }
 </style>
