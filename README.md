@@ -1,6 +1,6 @@
-# [Div](https://div.abrosimov.site)
+# [Div](https://v1ktorbro.github.io/div/)
 
-**[ Base URL: div.abrosimov.site ]**
+**[ Base URL: https://v1ktorbro.github.io/div ]**
 
 Тестовое от компании [Digital production в Ставрополе](https://div-production.ru).
 ## Инструменты:
