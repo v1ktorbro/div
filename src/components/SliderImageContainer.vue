@@ -40,12 +40,8 @@ export default {
 <style lang="scss">
 $cloudsCoverOnPhoto: url('../assets/images/clouds_in_front_picture.png');
 $arrowBtnImage: url('../assets/images/icon_middle_arrow.svg');
-
 .slider-image-container {
-  display: flex;
-  justify-content: center;
   margin-left: 83px;
-  margin-top: 180px;
   &::after {
     content: $cloudsCoverOnPhoto;
     max-width: 100%;
@@ -54,6 +50,7 @@ $arrowBtnImage: url('../assets/images/icon_middle_arrow.svg');
     background-image: $cloudsCoverOnPhoto;
     background-size: cover;
     bottom: 0;
+    top: 0;
     left: 0;
     overflow: hidden;
   }
@@ -66,9 +63,45 @@ $arrowBtnImage: url('../assets/images/icon_middle_arrow.svg');
   right: 0;
   top: 40%;
   transform-origin: left;
-  transform: translate(50%, -100%) rotate(90deg) ;
+  transform: translate(50%, -100%) rotate(90deg);
   color: #333333;
   z-index: 1;
   user-select: none;
+}
+@media screen and (max-width: 1280px) {
+  .slider-image-container {
+    margin-right: 50px;
+    &::after {
+      top: 65px;
+    }
+  }
+}
+@media screen and (max-width: 900px) {
+  .slider-image-container {
+    margin-left: 40px;
+  }
+}
+@media screen and (max-width: 750px) {
+  .slider-image-container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media screen and (max-width: 650px) {
+  .slider-image-container__emblem {
+    right: -30px;
+  }
+}
+@media screen and (max-width: 520px) {
+  .slider-image-container__emblem {
+    top: 2%;
+    font-size: 12px;
+    right: -35px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .slider-image-container {
+    max-width: 280px;
+  }
 }
 </style>

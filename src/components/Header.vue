@@ -19,7 +19,6 @@ export default {
 <style scoped lang="scss">
 $btnMenu: url('../assets/images/icon_menu.svg');
 $logo: url('../assets/images/logo.svg');
-
 .header {
   display: grid;
   grid-template-areas: 'btn-menu logo .';
@@ -32,7 +31,6 @@ $logo: url('../assets/images/logo.svg');
   margin-left: 35px;
   margin-right: 35px;
 }
-
 .header__btn-menu {
   border: none;
   outline: none;
@@ -44,7 +42,6 @@ $logo: url('../assets/images/logo.svg');
   cursor: pointer;
   background-color: transparent;
 }
-
 .header__logo {
   background-image: $logo;
   width: 183px;
@@ -53,4 +50,10 @@ $logo: url('../assets/images/logo.svg');
   margin-left: 100px;
 }
 
+@media screen and (max-width: 1280px) {
+  .header__logo {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 </style>

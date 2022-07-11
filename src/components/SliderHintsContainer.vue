@@ -58,4 +58,9 @@ $arrowBtnImage: url('../assets/images/icon_middle_arrow.svg');
     width: 63px;
   }
 }
+@media screen and (max-width: 750px) {
+  .slider-hints-container {
+    display: none;
+  }
+}
 </style>
